@@ -57,6 +57,14 @@ You can use raw `KeyframeSequence` objects in scripts. But for the animation edi
 
 You now have the full Mixamo animation loaded in the Clip Editor!
 
+## Troubleshooting
+
+- **"skeleton mismatch" error** — the `.dae` was not exported from the R15 template rig. Make sure you uploaded the provided FBX to Mixamo.
+- **"not baked matrix data" / self-check failure** — the export was not sampled. In the Mixamo download dialog use 'Keyframe Reduction': 'none' and 'Frames per Second': '30'.
+- **Character floats or sinks** — see `--root-y-offset` above.
+
+**-- USELESS DETAILS BELOW --**
+
 ## Command-line reference
 
 ```
@@ -87,13 +95,6 @@ The generated poses follow the same convention as Studio-authored clips (e.g. th
 - `--root-y-offset` — nudge the whole clip up/down in studs. If the character **floats or sinks** by a constant amount in Studio, re-run with `--root-y-offset` set to minus that amount (e.g. floats 0.4 studs -> `--root-y-offset -0.4`).
 
 The root **rotation** (dances that turn) is always kept.
-
-## Troubleshooting
-
-- **"skeleton mismatch" error** — the `.dae` was not exported from the R15 template rig. Make sure you uploaded the provided FBX to Mixamo and did not let Mixamo alter the character; then re-download and re-convert.
-- **"not baked matrix data" / self-check failure** — the export was not sampled. In the Mixamo download dialog use 'Keyframe Reduction': 'none' and 'Frames per Second': '30'.
-- **Character floats or sinks** — see `--root-y-offset` above.
-- **Studio says the file is corrupted** — should not happen with current outputs; `--rig-data omit` produces a file without the `AnimationRigData` item as a fallback (playback does not need it).
 
 ## License
 

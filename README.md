@@ -19,7 +19,7 @@ Requires Python 3.8+
 
 You should now have a Mixamo animation as a Collada `.dae`. We will now convert this to a `KeyframeSequence`:
 
-5. From the repo root, run:
+5. From the repo root (the folder this `README.md` is in), run:
 
    ```sh
    python src/convert.py "Silly Dancing.dae"

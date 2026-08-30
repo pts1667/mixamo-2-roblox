@@ -20,13 +20,13 @@ Requires Python 3.8+
 You should now have a Mixamo animation as a Collada `.dae`. We will now convert this to a `KeyframeSequence`:
 
 5. In the folder you extracted the ZIP to (should have a `README.md`), right click an empty space -> 'Open in Terminal'
-6. From the repo root (the folder this `README.md` is in), run:
+6. run:
 
    ```sh
-   python src/convert.py "Silly Dancing.dae"
+   python src/convert.py "<YOUR ANIMATION>.dae"
    ```
 
-   This writes `Silly Dancing.rbxmx` next to the input and prints the self-check result, e.g.:
+   For `Silly Dancing.dae`, this writes `Silly Dancing.rbxmx` next to the input and prints the self-check result, e.g.:
 
    ```
    Silly Dancing.dae: 116 keyframes @ 30 fps, 3.867s, FK max error 9.91e-05 studs -> Silly Dancing.rbxmx (round-trip 9.91e-05)

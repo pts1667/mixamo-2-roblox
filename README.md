@@ -12,14 +12,15 @@ Requires Python 3.8+
 ## Instructions
 
 0. Install Python 3.8 or newer
-1. Clone/unzip this repo
+1. Clone/unzip this repo; click the '< > Code' button at top of this page -> 'Download ZIP' and extract somewhere
 2. In Mixamo, 'UPLOAD CHARACTER' -> upload the provided `Rig_and_Attachments_Template_CLEAN.fbx` -> 'NEXT'
 3. Select whatever animation you want, click 'DOWNLOAD'
 4. In the download window, 'Format': 'Collada(.dae)', 'Skin': 'Without Skin', 'Frames per Second': '30', 'Keyframe Reduction': 'none'
 
 You should now have a Mixamo animation as a Collada `.dae`. We will now convert this to a `KeyframeSequence`:
 
-5. From the repo root (the folder this `README.md` is in), run:
+5. In the folder you extracted the ZIP to (should have a `README.md`), right click an empty space -> 'Open in Terminal'
+6. From the repo root (the folder this `README.md` is in), run:
 
    ```sh
    python src/convert.py "Silly Dancing.dae"
@@ -47,13 +48,13 @@ You should now have a Mixamo animation as a Collada `.dae`. We will now convert 
 You should now have your `KeyframeSequence` in `.rbxmx` format, which is XML data for Roblox.
 
 In Roblox Studio:
-6. Right-click any object in Explorer (i.e. `Workspace`), 'Insert' -> 'Import Roblox Model'
-7. Select your `.rbxmx` keyframe sequence
+7. Right-click any object in Explorer (i.e. `Workspace`), 'Insert' -> 'Import Roblox Model'
+8. Select your `.rbxmx` keyframe sequence
 
 You can use raw `KeyframeSequence` objects in scripts. But for the animation editor, you will need to Save to Roblox:
-8. When imported, right click your new `KeyframeSequence` -> 'Save / Export' -> 'Save to Roblox...'
-9. Fill out and click 'Save'
-10. In 'Avatar' -> 'Clip Editor', '...' -> 'Import' -> 'From Roblox...' and select your `KeyframeSequence`
+9. When imported, right click your new `KeyframeSequence` -> 'Save / Export' -> 'Save to Roblox...'
+10. Fill out and click 'Save'
+11. In 'Avatar' -> 'Clip Editor', '...' -> 'Import' -> 'From Roblox...' and select your `KeyframeSequence`
 
 You now have the full Mixamo animation loaded in the Clip Editor!
 

@@ -5,7 +5,7 @@ KeyframeSequence files. See the module docstrings of rig_read / dae_read /
 retarget / rbxmx_write for the pipeline stages.
 
 Usage (from the repo root):
-    python src/mixamo-2-roblox/convert.py "Silly Dancing.dae"
+    python src/convert.py "Silly Dancing.dae"
 """
 
 import argparse
